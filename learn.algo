@@ -1,0 +1,28 @@
+ALGORITHM algorithm_name
+VAR
+ phrase=STRING;
+ num-carac,word,vowles=INTEGER;
+
+BEGIN
+    vowels:= 0;
+    word:=1;
+    Write("oussama dali omar sabrine.");
+    Read(phrase);
+    num-carac:=phrase.Length;
+    Read(num-carac);
+    FOR i FROM 0 TO num-carac STEP step  DO
+        if(phrase[i]==" "){
+            word:=word+1;
+            
+        }
+         if(phrase[i]=="a"|| phrase[i]=="e"||phrase[i]=="i"||
+           phrase[i]=="o"|| phrase[i]=="u"||phrase[i]=="A"||
+           phrase[i]=="E"||phrase[i]=="I"||phrase[i]=="O" ||phrase[i]=="u")
+        {
+            vowels=vowles+1;
+        }
+    END_FOR
+    Write("number caracter", num-carac);
+    Write("number word", word);
+    Write("number vowles", vowles);
+END
